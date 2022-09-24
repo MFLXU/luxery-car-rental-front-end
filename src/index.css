@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+#hero-section{
+    background-image: url("./Assets/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#hero-renting-section{
+    background-image: url("./Assets/hero-renting-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#hero-membership-section{
+    background-image: url("./Assets/hero-membership-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#hero-chauffers-section{
+    background-image: url("./Assets/hero-chauffeur-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#brand-1{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\lambo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+#brand-2{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\bently.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+#brand-3{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\maclaren.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+#brand-4{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\mercedes-amg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+#brand-5{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\rollsroyce.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+#brand-6{
+    background-image: url("C:\Users\louay\Desktop\ReactJS\fastfood-website\src\Assets\porsche.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+@layer base {
+    body{
+        @apply bg-neutral-900 text-white
+    }
+    section{
+        @apply py-10
+    }
+    button{
+        @apply rounded-full py-2 px-8 w-full md:w-fit
+    }
+    .container{
+        @apply px-4 md:px-0
+    }
+    .btn-ghost{
+        @apply border border-amber-400 hover:bg-amber-300 hover:text-neutral-900 duration-300
+    }
+    .btn-ghost-reverse{
+        @apply border border-neutral-900 hover:bg-neutral-900 hover:text-amber-400 duration-300
+    }
+    /* ----- Navbar ----- */
+    .nav-con{
+        @apply py-4 grid md:grid-cols-3 grid-cols-2
+    }
+    .nav-logo{
+        @apply text-4xl font-extrabold italic
+    }
+    .nav-links{
+        @apply hidden md:flex items-center gap-8
+    }
+    .nav-link{
+        @apply hover:text-amber-400 duration-300
+    }
+    .nav-cta{
+        @apply hidden md:flex items-center justify-end gap-8
+    }
+    .nav-cta > p {
+        @apply text-amber-400
+    }
+    /* ----- Hero Section ----- */
+    #hero-section{
+        @apply w-full h-[100vh] md:h-[80vh] flex items-center justify-center
+    }
+    .hero-con{
+        @apply flex justify-center items-center flex-col gap-4 text-center px-4 md:px-0
+    }
+    .hero-con h1 {
+        @apply text-5xl md:text-8xl w-fit text-center font-bold italic
+    }
+    .hero-con p {
+        @apply md:w-[70%]
+    }
+    #hero-renting-section{
+        @apply w-full h-[100vh] md:h-[80vh] flex items-center justify-center
+    }
+    #hero-membership-section{
+        @apply w-full h-[100vh] md:h-[80vh] flex items-center justify-center
+    }
+    #hero-chauffers-section{
+        @apply w-full h-[100vh] md:h-[80vh] flex items-center justify-center
+    }
+    /* ----- About Section ----- */
+    .about-con{
+        @apply flex flex-col gap-4 items-center justify-center
+    }
+    .about-con h1{
+        @apply text-2xl font-bold
+    }
+    .about-con h2{
+        @apply text-3xl font-bold
+    }
+    .about-con h3{
+        @apply text-amber-400 font-bold text-2xl text-left w-full
+    }
+    .about-con p {
+        @apply w-full
+    }
+    .showmore{
+        @apply text-amber-400 cursor-pointer
+    }
+    /* ----- Brands Section ----- */
+    .ourbrands-con{
+        @apply flex flex-col gap-4 items-center justify-center
+    }
+    .ourbrands-con h2 {
+        @apply text-3xl font-bold
+    }
+    .brand{
+        @apply h-40 md:h-80 flex items-center justify-center md:grayscale-[50] hover:grayscale-[0] duration-500 cursor-default
+    }
+    .brand p {
+        @apply text-5xl font-bold
+    }
+    .brands{
+        @apply grid md:grid-cols-2 gap-10 w-full mt-20
+    }
+    /* ----- Services ----- */
+    .services-con{
+        @apply grid grid-cols-2 gap-4 md:grid-cols-5
+    }
+    .service{
+        @apply flex items-center justify-center flex-col hover:scale-110 duration-300
+    }
+    .service p {
+        @apply font-bold text-lg text-center
+    }
+    .service:nth-child(5){
+        @apply col-span-2 md:col-span-1
+    }
+    /* ----- Renting ----- */
+    .cars-con{
+        @apply grid md:grid-cols-3 gap-8
+    }
+    .car-card{
+        @apply rounded-xl overflow-hidden border border-amber-400 hover:scale-105 duration-300
+    }
+    .car-info{
+        @apply p-4 flex justify-between items-center
+    }
+    .car-rate{
+        @apply text-3xl text-amber-400 font-bold italic
+    }
+    .car-rate span {
+        @apply text-lg
+    }
+    .car-name{
+        @apply text-sm uppercase
+    }
+    .cars-nav{
+        @apply flex items-center md:justify-center  mb-8  overflow-x-scroll md:overflow-hidden
+    }
+    .cars-nav p{
+        @apply p-4 hover:bg-neutral-800 cursor-pointer uppercase  text-center
+    }
+    .carrent-con{
+        @apply rounded-lg  gap-8 grid md:grid-cols-2 bg-neutral-900 border-amber-400 border-2 p-4 md:p-10 fixed z-30 top-0 md:top-[10%] left-[50%] translate-x-[-50%]
+    }
+    .car-infos{
+        @apply flex flex-col justify-center gap-4
+    }
+    .carrent-con .name {
+        @apply text-4xl text-amber-400 font-bold
+    }
+    .carrent-con .main-info{
+        @apply flex items-center justify-between md:flex-row flex-col
+    }
+    .carrent-con .miles{
+        @apply text-amber-400
+    }
+    .carrent-con .speeding-infos{
+        @apply flex items-center gap-8
+    }
+    .carrent-con .speeding {
+        @apply flex flex-col
+    }
+    .carrent-con .speeding p:nth-child(1){
+        @apply text-5xl font-bold
+    }
+    .carrent-con .speeding p:nth-child(2){
+        @apply text-xl font-bold text-neutral-500
+    }
+    .carrent-con .infos{
+        @apply grid md:grid-cols-2 gap-4
+    }
+    .carrent-con .info {
+        @apply flex flex-col p-4 bg-neutral-800 rounded-lg gap-1
+    }
+    .carrent-con .info p:nth-child(1){
+        @apply text-xl font-bold
+    }
+    .carrent-con .info p:nth-child(2){
+         @apply text-amber-400
+     }
+    .carrent-con .dyc{
+        @apply text-amber-400 font-bold text-xl
+    }
+    .carrent-con .car-media{
+        @apply flex justify-center items-center flex-col
+    }
+    .carrent-con .car-media button {
+        @apply mt-auto
+    }
+    .car-media .form {
+        @apply w-full flex flex-col gap-2 mb-8
+    }
+    .car-media .form > p{
+        @apply text-2xl text-amber-400 mb-4
+    }
+    .car-media .form input{
+        @apply bg-inherit text-amber-400 border-b border-amber-400 p-2 outline-0
+    }
+    .car-media .form label {
+        @apply mt-2 text-xl
+    }
+    .car-media .confirm-renting{
+        @apply flex flex-col gap-4 justify-center items-center text-center
+    }
+    .car-media .confirm-renting img {
+        @apply w-[50%]
+    }
+    .car-media .confirm-renting h1{
+        @apply text-amber-400 text-4xl font-bold
+    }
+    /* ----- Benefits ----- */
+    .benefits-con{
+        @apply p-4 md:p-8  border text-center gap-4 border-amber-400 rounded-xl border-2 flex flex-col justify-center items-center
+    }
+    .benefits-con .title{
+        @apply text-5xl font-bold text-amber-400
+    }
+    .benefits-con .price{
+        @apply text-4xl font-bold text-amber-400
+    }
+    .benifits{
+        @apply grid gap-4
+    }
+    .benifit{
+        @apply flex items-center gap-4 justify-center
+    }
+    .benifit img {
+        @apply w-8
+    }
+    .benifit p {
+        @apply text-amber-400 text-lg
+    }
+    /* ----- Chauffers ----- */
+    .carccard-con{
+        @apply grid gap-8 md:grid-cols-2
+    }
+    /* ----- Membership ----- */
+    .backdrop{
+        @apply bg-black w-full h-screen fixed top-0 left-0 opacity-75 z-20
+    }
+    .application-con{
+        @apply rounded-lg flex flex-col gap-4 items-center justify-center bg-amber-400 text-black p-4 md:p-10 fixed z-30 top-[10%] left-[50%] translate-x-[-50%]
+    }
+    .application-form{
+    @apply grid gap-2 w-full
+    }
+    .application-con h1{
+        @apply font-bold text-5xl text-center
+    }
+    .application-form p {
+        @apply font-bold text-2xl
+    }
+    .application-con input, textarea{
+        @apply bg-inherit p-2 border-b border-black placeholder-neutral-700 outline-0
+    }
+    .close-icon{
+        @apply p-2 bg-amber-400 fixed z-[100] top-4 right-4 rounded-lg cursor-pointer
+    }
+    .close-icon img {
+        @apply w-6
+    }
+}
